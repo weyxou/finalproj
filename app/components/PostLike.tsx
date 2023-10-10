@@ -1,9 +1,11 @@
 import React from 'react'
-import { Like, PostLike } from '../types';
+import { Comment, Like, PostLike } from '../types';
 import {AiFillHeart} from 'react-icons/ai'
 import {BiLoaderCircle} from 'react-icons/bi'
 import { useRouter } from 'next/router';
 import {AiOutlineComment} from 'react-icons/ai'
+import { comment } from 'postcss';
+import {TfiShare} from 'react-icons/tfi'
 
 
 export default function PostLike({post} : PostLike) {
@@ -12,6 +14,7 @@ export default function PostLike({post} : PostLike) {
     const [CLickLike, setCLickLike]=React.useState<boolean>(false)
     const [userLiked, setuserLiked]=React.useState<boolean>(false)
     const [likes, setlikes] = React.useState<Like[]>([])
+    const [comments, setComments] = React.useState<Comment[]>([])
 
     const Like = ()=>{
         console.log('liked');
@@ -36,10 +39,23 @@ export default function PostLike({post} : PostLike) {
                     {likes?.length}
                 </span>
             </div>
+
             <button onClick={() => router.push(`/post/${post?.id}/${post?.profile?.user_id}`)}
             className='pb-4 text-center'>
                 <div className='rounded-full p-2 cursor-pointer'>
                     <AiOutlineComment/>
+                    <span>
+                        {comments?.length}
+                    </span>
+                </div>
+            </button>
+
+            <button className='pb-4 text-center'>
+                <div className='rounded-full p-2 cursor-pointer'>
+                    <TfiShare/>
+                    <span className='text-[12px]'>
+                        18
+                    </span>
                 </div>
             </button>
 

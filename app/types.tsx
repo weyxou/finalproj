@@ -13,6 +13,14 @@ export interface Like{
     post_id: string,
 }
 
+
+export interface Comment{
+    id:string,
+    user_id: string,
+    post_id: string,
+    text: string
+}
+
 export interface Post{
     id:string,
     user_id:string,

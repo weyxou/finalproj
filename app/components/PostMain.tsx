@@ -26,7 +26,7 @@ export default function PostMain({ post }: PostMainTypes) {
         <div className='cursor-pointer'>
           <img src={post?.profile.image} alt="" className='rounded-full max-h-[60px]' width='60' />
         </div>
-        <div className='pl-3 w-full px-4'>
+        <div className='pl-3 w-full px-4 items-center '>
           <div className='flex items-center justify-between pb-0.5'>
             <Link href={`/profile/${post.profile.user_id}`}>
               <span className='font-bold hover:underline cursor-pointer'>
@@ -34,12 +34,12 @@ export default function PostMain({ post }: PostMainTypes) {
               </span>
             </Link>
 
-            <button className='border text-[15px] px-[21px] py-0.5 border-[#8A2BE2] text-[#8A2BE2] hover:bg-white font-semibold rounded-md'>
+            <button className='border text-[15px] px-[21px] py-0.5 border-[#0f0d2c] text-[#0f0d2c] hover:bg-[#0f0d2c] font-semibold rounded-md hover:text-white'>
               Follow
             </button>
           </div>
           <p className='text-[15px] pb-0.5 break-words md:max-w-[400px] max-w-[300px]'>{post.text}</p>
-          <p className='text-[15px] text-gray-600 pb-0.5'>#dreamqwerttt #qwerty #recommended</p>
+          <p className='text-[15px] text-gray-600 pb-0.5'>#dreamqwerty #qwerty #recommended</p>
           <p className='text-[15px] pb-0.5 flex items-center font-semibold'>
             <PiMusicNoteSimpleLight />
             <span className='px-1'>music from - Jika</span>
@@ -52,8 +52,7 @@ export default function PostMain({ post }: PostMainTypes) {
                 loop
                 controls
                 muted
-                className='rounded-xl object-cover mx-auto h-full'
-              />
+                className='rounded-xl object-cover mx-auto h-full'/>
             </div>
             <PostLike post={post}/>
           </div>
