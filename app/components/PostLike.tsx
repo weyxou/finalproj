@@ -2,7 +2,7 @@ import React from 'react'
 import { Comment, Like, PostLike } from '../types';
 import {AiFillHeart} from 'react-icons/ai'
 import {BiLoaderCircle} from 'react-icons/bi'
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import {AiOutlineComment} from 'react-icons/ai'
 import { comment } from 'postcss';
 import {TfiShare} from 'react-icons/tfi'
@@ -10,7 +10,7 @@ import {TfiShare} from 'react-icons/tfi'
 
 export default function PostLike({post} : PostLike) {
   
-    const router = useRouter
+    const router = useRouter()
     const [CLickLike, setCLickLike]=React.useState<boolean>(false)
     const [userLiked, setuserLiked]=React.useState<boolean>(false)
     const [likes, setlikes] = React.useState<Like[]>([])
@@ -40,6 +40,7 @@ export default function PostLike({post} : PostLike) {
                 </span>
             </div>
 
+            {/* <button onClick={() => router.push(`/post/${post?.id}/${post?.profile?.user_id}`)} */}
             <button onClick={() => router.push(`/post/${post?.id}/${post?.profile?.user_id}`)}
             className='pb-4 text-center'>
                 <div className='rounded-full p-2 cursor-pointer'>

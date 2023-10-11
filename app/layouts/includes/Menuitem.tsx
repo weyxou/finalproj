@@ -19,7 +19,7 @@ export default function Menuitem({ iconString, colorString, sizeString}: Menuite
 
     return (
     <>
-    <div  className='w-full flex items-center p-2.5 rounded-md'>
+    <div className='w-full flex items-center p-2.5 rounded-md'>
         <div className='flex items-center lg:mx-0 mx-auto'>
             {icons()}
 

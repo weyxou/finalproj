@@ -18,9 +18,13 @@ export default function Sidebar() {
             colorString={pathname === '/' ? 'white' : ''}
             sizeString='25'
           />
+        <Menuitem iconString='Live'
+         colorString={pathname === '/' ? 'white' : ''}
+         sizeString='25' />
+        <Menuitem iconString='Follow' 
+         colorString={pathname === '/' ? 'white' : ''}
+         sizeString='25'/>
         </Link>
-        <Menuitem iconString='Follow' />
-        <Menuitem iconString='Live' />
         
         <div className='border-b lg-ml-2 mt-2'>
           <h2 className='lg:block hidden text-xs text-white font-semibold pt-4 pb-2'> Accounts</h2>
