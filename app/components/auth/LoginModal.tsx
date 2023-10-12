@@ -1,4 +1,4 @@
-// components/LoginModal.tsx
+// LoginModal.tsx
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -7,16 +7,15 @@ import { RiCloseLine } from 'react-icons/ri';
 interface LoginModalProps {
   isOpen: boolean;
   onClose: () => void;
+  handleRegister: (email: string, password: string) => void;
 }
 
-const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
+const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, handleRegister }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    // Implement your login logic here
     console.log(`Logging in with email: ${email} and password: ${password}`);
-    // Close the modal after login (you can replace this with your actual login logic)
     onClose();
   };
 
@@ -52,14 +51,14 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
               required
             />
           </div>
-          <button type="submit" className="w-full py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600">
+          <button type="submit" onClick={() => handleRegister(email, password)} className="w-full py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600">
             Login
           </button>
         </form>
         <p className="text-center mt-4">
           Don't have an account?{' '}
-          <Link href="/signup" passHref>
-            <span className="text-blue-500 hover:underline">Sign up</span>
+          <Link href="/sign" passHref className="text-blue-500 hover:underline">
+            Sign up
           </Link>
         </p>
       </div>

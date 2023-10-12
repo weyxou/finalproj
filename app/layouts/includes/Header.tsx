@@ -7,7 +7,8 @@ import { RiHeartAddFill } from 'react-icons/ri'
 import { PiDotsThreeOutlineVerticalLight } from 'react-icons/pi'
 import { BsPersonHeart } from 'react-icons/bs'
 import { CiLogout } from 'react-icons/ci'
-import LoginModal from '@/app/components/LoginModal'
+import LoginModal from '../../components/auth/LoginModal'
+
 
 export default function Header() {
   const router = useRouter()
@@ -120,7 +121,6 @@ export default function Header() {
       </div>
 
       <LoginModal isOpen={isLoginModalOpen} onClose={closeLoginModal} />{' '}
-      {/* Render the LoginModal */}
     </>
   )
 }

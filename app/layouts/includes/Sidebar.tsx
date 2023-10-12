@@ -2,8 +2,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 import Menuitem from './Menuitem'
-import Client from '@/app/components/Client'
 import MenuitemFollow from './MenuitemFollow'
+import Client from '../../components/Client'
 
 export default function Sidebar() {
   const pathname = usePathname()

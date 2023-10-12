@@ -2,10 +2,17 @@ import Image from 'next/image'
 import MainLayout from './layouts/MainLayout'
 import Client from './components/Client'
 import PostMain from './components/PostMain'
+import { Provider } from 'react-redux'
+import { store } from './components/auth/store/page'
+
+
 
 export default function Home() {
+
+  
   return (
     <>
+    <Provider store={store}>
     <MainLayout>
     <div className='mt-[80px] w-[400px] max-w-[690px] ml-auto'>
       <Client>
@@ -25,6 +32,7 @@ export default function Home() {
       </Client>
     </div>
     </MainLayout>
+    </Provider>
     </>
   )
 }
