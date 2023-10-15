@@ -11,7 +11,7 @@ import LoginModal from '../../components/auth/LoginModal'
 
 
 export default function Header() {
-  const router = useRouter()
+  // const router = useRouter()
   const pathname = usePathname()
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
 
@@ -49,9 +49,8 @@ export default function Header() {
               type='text'
               onChange={handleSeacrhName}
               placeholder='search'
-              className='w-full pl-3 my-3 bg-transparent placeholder-[#838383] text-[15px] focus-outline-none'
-            />
-
+              className='w-full pl-3 my-3 bg-transparent placeholder-[#838383] text-[15px] focus-outline-none'/>
+{/* 
             <div className='absolute bg-white max-w-[910px] h-auto w-full z-2- left-0 top-12 border p-1'>
               <div className='p-1'>
                 <Link
@@ -68,7 +67,7 @@ export default function Header() {
                   </div>
                 </Link>
               </div>
-            </div>
+            </div> */}
 
             <div className='px-3 py-1 flex items-center border-1 border-l-gray-300'>
               <BsSearchHeart />
@@ -120,7 +119,7 @@ export default function Header() {
         </div>
       </div>
 
-      <LoginModal isOpen={isLoginModalOpen} onClose={closeLoginModal} />{' '}
+      {/* <LoginModal isOpen={isLoginModalOpen} onClose={closeLoginModal} />{' '} */}
     </>
   )
 }

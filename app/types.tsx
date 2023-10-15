@@ -12,6 +12,14 @@ export interface Like {
   post_id: string;
 }
 
+export interface Post{
+  id: string;
+  user_id: string;
+  post_id: string;
+  text: string;
+  created_at:string;
+}
+
 export interface Comment {
   id: string;
   user_id: string;
@@ -32,6 +40,17 @@ export interface Post {
   };
 }
 
+
+
+export interface ProfilePageTypes{
+  params: {id: string}
+}
+
+export interface UploadError{
+  type: string;
+  message: string;
+}
+
 export interface MenuitemsTypes {
   iconString: string;
   colorString: string;
@@ -45,6 +64,9 @@ export interface Follows {
 
 // Export the 'PostMainTypes' type as a named export
 export interface PostMainTypes {
+  post: Post;
+}
+export interface PostUserTypes {
   post: Post;
 }
 

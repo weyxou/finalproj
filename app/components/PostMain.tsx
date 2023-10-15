@@ -6,6 +6,8 @@ import { AiOutlineHeart } from 'react-icons/ai';
 import { PiMusicNoteSimpleLight } from 'react-icons/pi';
 import PostLike from './PostLike';
 
+
+
 export default function PostMain({ post }: PostMainTypes) {
   useEffect(() => {
     const video = document.getElementById(`video-${post?.id}`) as HTMLVideoElement;

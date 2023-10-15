@@ -13,7 +13,6 @@ export default function Uploadlayout({children} : {children: React.ReactNode}) {
         <div className="flex juctify-between mx-auto w-full px-2 max-w-[1140px] ">
             {children}
         </div>
-
       </div>
         </>
     )
